@@ -947,6 +947,13 @@ class ObjectLoader extends Loader {
 
 		if ( data.name !== undefined ) object.name = data.name;
 
+		if ( data.spriteCameraPosition !== undefined ) object.spriteCameraPosition = data.spriteCameraPosition;
+        if ( data.spriteName !== undefined ) object.spriteName = data.spriteName;
+
+
+		if ( data.italkieID !== undefined ) object.italkieID = data.italkieID;
+		if(data.userData)
+		if ( data.userData.italkieID !== undefined ) object.italkieID
 		if ( data.matrix !== undefined ) {
 
 			object.matrix.fromArray( data.matrix );

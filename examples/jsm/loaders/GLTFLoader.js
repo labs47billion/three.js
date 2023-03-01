@@ -4164,7 +4164,20 @@ class GLTFParser {
 				parser.associations.set( node, {} );
 
 			}
+			if ( nodeDef.italkieID ) {
 
+				node.userData.italkieID = nodeDef.italkieID;
+				node.italkieID = nodeDef.italkieID;
+
+			}
+			if(nodeDef.spriteCameraPosition)
+			{
+				node.spriteCameraPosition=nodeDef.spriteCameraPosition;
+			}
+            if(nodeDef.spriteName)
+			{
+				node.spriteName=nodeDef.spriteName;
+			}
 			parser.associations.get( node ).nodes = nodeIndex;
 
 			return node;

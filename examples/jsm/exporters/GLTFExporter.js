@@ -2155,7 +2155,9 @@ class GLTFWriter {
 
 		// We don't export empty strings name because it represents no-name in Three.js.
 		if ( object.name !== '' ) nodeDef.name = String( object.name );
-
+		nodeDef.italkieID =  object.italkieID ;
+		nodeDef.spriteCameraPosition=object.spriteCameraPosition;
+        nodeDef.spriteName=object.spriteName;
 		this.serializeUserData( object, nodeDef );
 
 		if ( object.isMesh || object.isLine || object.isPoints ) {
